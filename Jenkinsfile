@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {nodejs "node"}
     triggers {
-        cron('*/1 * * * *')
+        cron('H */2 * * *')
     }
     stages {
         stage("build repository"){
