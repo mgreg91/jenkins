@@ -1,6 +1,9 @@
 pipeline {
     agent any
     tools {nodejs "node"}
+    triggers {
+        cron('*/1 * * * *')
+    }
     stages {
         stage("build repository"){
             steps{
