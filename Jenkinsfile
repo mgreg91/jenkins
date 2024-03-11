@@ -32,7 +32,7 @@ pipeline {
         stage("cleanup"){
             steps{
                 echo "deleting repository data"
-                bat("rmdir c:\\ProgramData\\Jenkins\\.jenkins\\workspace\\ /S /Q")
+                bat("rmdir c:\\ProgramData\\Jenkins\\.jenkins\\workspace /S /Q")
                 echo "repository data deleted"
             }
         }
