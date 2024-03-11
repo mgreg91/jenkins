@@ -24,11 +24,16 @@ class LoginPage {
 
   async login(email, password) {
     await this.inputUserEmail.setValue(email);
+    await this.btnLogin.waitForDisplayed();
     await this.btnLogin.click();
+    browser.pause(5000);
     await waitUntilPageLoads();
+    browser.pause(5000);
     await this.inputPassword.waitForDisplayed();
+    browser.pause(5000);
     await this.inputPassword.setValue(password);
     await this.btnLoginSubmit.click();
+    browser.pause(5000);
   }
 
   open() {
